@@ -9,6 +9,7 @@ public class collecter : MonoBehaviour
     private void Awake()
     {
         thisObject = GetComponent<Object>();
+        PlayerPrefs.DeleteKey(thisObject.ID);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
