@@ -15,6 +15,12 @@ public class PlayerMovement : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+
+    private void Awake()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
     // Update is called once per frame
     void Update()
     {
