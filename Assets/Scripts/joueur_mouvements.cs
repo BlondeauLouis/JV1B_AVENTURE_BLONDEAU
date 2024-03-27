@@ -1,42 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Controles : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Vitesse de déplacement du joueur
-    public float maxSpeed = 5f; // Vitesse maximale du joueur
+    public float speed;
+    private Rigidbody2D myRigidbody;
+    private Vector3 change;
 
-    private Rigidbody2D rb;
-
+    // Start is called before the first frame update
     void Start()
     {
+        myRigidbody = GetComponent<Rigidbody2D>();
         DontDestroyOnLoad(this);
-        rb = GetComponent<Rigidbody2D>();
     }
 
+    // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        // Calculer le vecteur de mouvement
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-
-        // Normaliser le vecteur pour éviter le mouvement diagonal plus rapide
-        movement.Normalize();
-
-        // Appliquer une force de déplacement
-        rb.AddForce(movement * moveSpeed);
-
-        // Limiter la vitesse maximale
-        if (rb.velocity.magnitude > maxSpeed)
+        change = Vector3.zero;
+        change.x = Input.GetAxisRaw("Horizontal");
+        change.y = Input.GetAxisRaw("Vertical");
+        if (change != Vector3.zero)
         {
-            rb.velocity = rb.velocity.normalized * maxSpeed;
+            MoveCharacter();
         }
-
-        // Si aucune entrée de mouvement n'est détectée, arrêtez le mouvement
-        if (moveHorizontal == 0f && moveVertical == 0f)
-        {
-            rb.velocity = Vector2.zero;
-        }
+        Debug.Log(change); //pour debug
+    }
+    void MoveCharacter()
+    {
+        myRigidbody.MovePosition(
+            transform.position + change * speed
+        );
     }
 }
