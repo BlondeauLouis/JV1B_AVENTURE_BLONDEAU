@@ -25,4 +25,16 @@ public class EnemyMovement : MonoBehaviour
             transform.Translate(direction * moveSpeed * Time.deltaTime);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player")) // Vérifie si la collision est avec le joueur
+        {
+            PlayerMovement player = other.GetComponent<PlayerMovement>(); // Obtient une référence au script du joueur
+            if (player != null)
+            {
+                player.Respawn(); // Appelle la fonction de réapparition du joueur
+            }
+        }
+    }
 }

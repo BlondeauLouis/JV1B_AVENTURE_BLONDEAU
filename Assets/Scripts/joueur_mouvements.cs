@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
+    public Transform respawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -38,5 +39,10 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.MovePosition(
             transform.position + change * speed
         );
+    }
+
+    public void Respawn()
+    {
+        transform.position = respawnPoint.position;
     }
 }
