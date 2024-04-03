@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -43,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Respawn()
     {
+        SceneManager.LoadScene("Scene0");
         transform.position = respawnPoint.position;
     }
 }

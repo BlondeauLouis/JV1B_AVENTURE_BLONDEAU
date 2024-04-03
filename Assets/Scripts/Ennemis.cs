@@ -30,10 +30,11 @@ public class EnemyMovement : MonoBehaviour
     {
         if (other.CompareTag("Player")) // Vérifie si la collision est avec le joueur
         {
-            PlayerMovement player = other.GetComponent<PlayerMovement>(); // Obtient une référence au script du joueur
+            PlayerMovement playerScript = other.GetComponent<PlayerMovement>(); // Obtient une référence au script du joueur
             if (player != null)
             {
-                player.Respawn(); // Appelle la fonction de réapparition du joueur
+                playerScript.Respawn(); // Appelle la fonction de réapparition du joueur
+                player = GameObject.FindGameObjectWithTag("Player").transform;
             }
         }
     }
