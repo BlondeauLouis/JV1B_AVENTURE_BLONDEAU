@@ -44,7 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Respawn()
     {
-        transform.position = respawnPoint.position;
+        Destroy(gameObject);
         SceneManager.LoadScene("Scene0");
+        transform.position = respawnPoint.position;
     }
 }
