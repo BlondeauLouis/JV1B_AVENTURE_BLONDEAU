@@ -33,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
             PlayerMovement player = other.GetComponent<PlayerMovement>(); // Obtient une référence au script du joueur
             if (player != null)
             {
-                player.Respawn(); // Appelle la fonction de réapparition du joueur
+                player.PerdPv();
             }
         }
     }

@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Barre de vie_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2065
+        width: 3508
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61f4763d85ce4f4aabf473126e71aea
+      internalID: -592694226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barre de vie_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1652
+        width: 3508
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45deb080923bba546b0d1dbc2967e40a
+      internalID: 991048609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barre de vie_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1239
+        width: 3508
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4dcc8220ce5b2645a1d24f698eaf6c5
+      internalID: -669497540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barre de vie_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 852
+        width: 3508
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ab51aa9395f79409fc17dd0ff1f90b
+      internalID: 1227914860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barre de vie_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 413
+        width: 3508
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 50, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8caea08f5d332e44b93b1558896d42b3
+      internalID: -1720830398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barre de vie_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 3508
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88363eb331f12a840a126ab605c483ff
+      internalID: -874656573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +232,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Barre de vie_0: -592694226
+      Barre de vie_1: 991048609
+      Barre de vie_2: -669497540
+      Barre de vie_3: 1227914860
+      Barre de vie_4: -1720830398
+      Barre de vie_5: -874656573
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

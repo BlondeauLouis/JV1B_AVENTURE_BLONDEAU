@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public int maxHealth = 6;
+    public int currentHealth;
     public float speed;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
@@ -15,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         DontDestroyOnLoad(this);
+        currentHealth = maxHealth;
     }
 
 
@@ -34,12 +37,22 @@ public class PlayerMovement : MonoBehaviour
             MoveCharacter();
         }
         Debug.Log(change); //pour debug
+
+        if (currentHealth<=0)
+        {
+            Respawn();
+        }
     }
     void MoveCharacter()
     {
         myRigidbody.MovePosition(
             transform.position + change * speed
         );
+    }
+
+    public void PerdPv()
+    {
+        currentHealth--;
     }
 
     public void Respawn()
