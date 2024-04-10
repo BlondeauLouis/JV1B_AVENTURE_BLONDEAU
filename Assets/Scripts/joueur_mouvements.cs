@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Sprite sp1, sp2;
     public int maxHealth = 6;
     public int currentHealth;
     public float speed;
@@ -12,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 change;
     public Transform respawnPoint;
     private SpriteRenderer spriteRenderer;
+    private bool isInvincible = false;
+    public float invincibilityTime = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +46,14 @@ public class PlayerMovement : MonoBehaviour
         {
             spriteRenderer.flipX = false;
         }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            spriteRenderer.flipX = true;
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            spriteRenderer.flipX = false;
+        }
 
         if (change != Vector3.zero)
         {
@@ -64,7 +75,24 @@ public class PlayerMovement : MonoBehaviour
 
     public void PerdPv()
     {
-        currentHealth--;
+        if (!isInvincible)
+        {
+            currentHealth--;
+            StartCoroutine(InvincibilityRoutine());
+        }
+    }
+
+    IEnumerator InvincibilityRoutine()
+    {
+        isInvincible = true;
+
+        GetComponent<SpriteRenderer>().sprite = sp2;
+
+        yield return new WaitForSeconds(invincibilityTime);
+
+        isInvincible = false;
+
+        GetComponent<SpriteRenderer>().sprite = sp1;
     }
 
     public void Respawn()
