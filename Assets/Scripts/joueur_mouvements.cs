@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     public Transform respawnPoint;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         DontDestroyOnLoad(this);
         currentHealth = maxHealth;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
 
@@ -32,6 +34,16 @@ public class PlayerMovement : MonoBehaviour
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            spriteRenderer.flipX = true;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            spriteRenderer.flipX = false;
+        }
+
         if (change != Vector3.zero)
         {
             MoveCharacter();
