@@ -59,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
         {
             MoveCharacter();
         }
-        Debug.Log(change); //pour debug
 
         if (currentHealth<=0)
         {
