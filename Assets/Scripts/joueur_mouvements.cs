@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Sprite sp1, sp2;
+    public Sprite sp1, sp2, backsprite, frontsprite;
     public int maxHealth = 6;
     public int currentHealth;
     public float speed;
@@ -40,18 +40,42 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
+            GetComponent<SpriteRenderer>().sprite = sp1;
             spriteRenderer.flipX = true;
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
+            GetComponent<SpriteRenderer>().sprite = sp1;
             spriteRenderer.flipX = false;
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            GetComponent<SpriteRenderer>().sprite = sp1;
             spriteRenderer.flipX = true;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
+            GetComponent<SpriteRenderer>().sprite = sp1;
+            spriteRenderer.flipX = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            GetComponent<SpriteRenderer>().sprite = backsprite;
+            spriteRenderer.flipX = false;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            GetComponent<SpriteRenderer>().sprite = frontsprite;
+            spriteRenderer.flipX = false;
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            GetComponent<SpriteRenderer>().sprite = backsprite;
+            spriteRenderer.flipX = false;
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            GetComponent<SpriteRenderer>().sprite = frontsprite;
             spriteRenderer.flipX = false;
         }
 

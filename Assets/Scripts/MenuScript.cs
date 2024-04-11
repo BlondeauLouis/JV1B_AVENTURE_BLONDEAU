@@ -1,33 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/// <summary>
-/// Script de l'écran titre
-/// </summary>
-public class MenuScript : MonoBehaviour
+public class LoadSceneOnClick : MonoBehaviour
 {
-    void OnGUI()
+    public void LoadScene()
     {
-        const int buttonWidth = 84;
-        const int buttonHeight = 60;
-
-        // Affiche un bouton pour démarrer la partie
-        if (
-          GUI.Button(
-            // Centré en x, 2/3 en y
-            new Rect(
-              Screen.width / 2 - (buttonWidth / 2),
-              (2 * Screen.height / 3) - (buttonHeight / 2),
-              buttonWidth,
-              buttonHeight
-            ),
-            "Jouer"
-          )
-        )
-        {
-            // Sur le clic, on démarre le premier niveau
-            // "Stage1" est le nom de la première scène que nous avons créés.
-            SceneManager.LoadScene("Scene0");
-        }
+        SceneManager.LoadScene("Scene0");
     }
 }
