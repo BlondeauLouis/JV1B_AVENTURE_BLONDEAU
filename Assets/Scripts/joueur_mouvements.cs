@@ -46,8 +46,8 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.flipX = true;
             if (beakTransform != null)
             {
-                // Exemple d'ajustement de position (à adapter selon les besoins)
-                beakTransform.localPosition = new Vector3(-0.5f, 0.2f, 0f);
+                beakTransform.localPosition = new Vector3(-2.5f, 1f, 0f);
+                beakTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             }
         }
         if (Input.GetKeyDown(KeyCode.D))
@@ -56,8 +56,8 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.flipX = false;
             if (beakTransform != null)
             {
-                // Exemple d'ajustement de position (à adapter selon les besoins)
-                beakTransform.localPosition = new Vector3(2f, 0.5f, 0f);
+                beakTransform.localPosition = new Vector3(2.5f, 1f, 0f);
+                beakTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             }
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -66,8 +66,8 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.flipX = true;
             if (beakTransform != null)
             {
-                // Exemple d'ajustement de position (à adapter selon les besoins)
-                beakTransform.localPosition = new Vector3(-0.5f, 0.2f, 0f);
+                beakTransform.localPosition = new Vector3(-2.5f, 1f, 0f);
+                beakTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             }
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -76,19 +76,29 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.flipX = false;
             if (beakTransform != null)
             {
-                // Exemple d'ajustement de position (à adapter selon les besoins)
-                beakTransform.localPosition = new Vector3(0.5f, 0.2f, 0f);
+                beakTransform.localPosition = new Vector3(2.5f, 1f, 0f);
+                beakTransform.localRotation = Quaternion.Euler(0f, 0f,  0f);
             }
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
             GetComponent<SpriteRenderer>().sprite = backsprite;
             spriteRenderer.flipX = false;
+            if (beakTransform != null)
+            {
+                beakTransform.localPosition = new Vector3(-2f, 2.5f, 0f);
+                beakTransform.localRotation = Quaternion.Euler(0f, 0f, 90f);
+            }
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             GetComponent<SpriteRenderer>().sprite = frontsprite;
             spriteRenderer.flipX = false;
+            if (beakTransform != null)
+            {
+                beakTransform.localPosition = new Vector3(-2f, -1.25f, 0f);
+                beakTransform.localRotation = Quaternion.Euler(0f, 0f, 90f);
+            }
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
