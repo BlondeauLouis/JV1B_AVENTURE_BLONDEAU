@@ -779,6 +779,7 @@ MonoBehaviour:
   speed: 0.25
   respawnPoint: {fileID: 1338997318}
   invincibilityTime: 2
+  beakTransform: {fileID: 2114312669}
 --- !u!50 &825175592
 Rigidbody2D:
   serializedVersion: 4
@@ -1752,7 +1753,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778861435}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

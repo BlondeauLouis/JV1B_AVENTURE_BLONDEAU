@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private bool isInvincible = false;
     public float invincibilityTime = 2f;
 
+    public Transform beakTransform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,21 +44,41 @@ public class PlayerMovement : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().sprite = sp1;
             spriteRenderer.flipX = true;
+            if (beakTransform != null)
+            {
+                // Exemple d'ajustement de position (à adapter selon les besoins)
+                beakTransform.localPosition = new Vector3(-0.5f, 0.2f, 0f);
+            }
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             GetComponent<SpriteRenderer>().sprite = sp1;
             spriteRenderer.flipX = false;
+            if (beakTransform != null)
+            {
+                // Exemple d'ajustement de position (à adapter selon les besoins)
+                beakTransform.localPosition = new Vector3(2f, 0.5f, 0f);
+            }
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             GetComponent<SpriteRenderer>().sprite = sp1;
             spriteRenderer.flipX = true;
+            if (beakTransform != null)
+            {
+                // Exemple d'ajustement de position (à adapter selon les besoins)
+                beakTransform.localPosition = new Vector3(-0.5f, 0.2f, 0f);
+            }
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             GetComponent<SpriteRenderer>().sprite = sp1;
             spriteRenderer.flipX = false;
+            if (beakTransform != null)
+            {
+                // Exemple d'ajustement de position (à adapter selon les besoins)
+                beakTransform.localPosition = new Vector3(0.5f, 0.2f, 0f);
+            }
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
