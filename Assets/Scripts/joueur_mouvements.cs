@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = sp1;
             spriteRenderer.flipX = false;
         }
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             GetComponent<SpriteRenderer>().sprite = backsprite;
             spriteRenderer.flipX = false;
