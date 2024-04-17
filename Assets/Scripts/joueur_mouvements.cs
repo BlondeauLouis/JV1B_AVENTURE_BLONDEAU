@@ -127,7 +127,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(inventoryKey))
         {
-            // Inversez l'état de l'inventaire
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }
     }
