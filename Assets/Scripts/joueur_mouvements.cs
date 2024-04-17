@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform beakTransform;
 
+    public GameObject inventoryUI;
+    public KeyCode inventoryKey = KeyCode.I;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         DontDestroyOnLoad(this);
         currentHealth = maxHealth;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        inventoryUI.SetActive(false);
     }
 
 
@@ -119,6 +123,12 @@ public class PlayerMovement : MonoBehaviour
         if (currentHealth<=0)
         {
             Respawn();
+        }
+
+        if (Input.GetKeyDown(inventoryKey))
+        {
+            // Inversez l'état de l'inventaire
+            inventoryUI.SetActive(!inventoryUI.activeSelf);
         }
     }
     void MoveCharacter()
