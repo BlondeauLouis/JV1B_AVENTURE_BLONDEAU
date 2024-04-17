@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 226117882}
   - component: {fileID: 226117881}
   - component: {fileID: 226117880}
-  - component: {fileID: 226117883}
   m_Layer: 0
   m_Name: Inventaire
   m_TagString: Untagged
@@ -228,20 +227,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &226117883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226117878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec965283b185563408c29d5e7d652b53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryUI: {fileID: 226117878}
-  inventoryKey: 105
 --- !u!1 &376019022
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +399,7 @@ GameObject:
   - component: {fileID: 652849362}
   - component: {fileID: 652849361}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text Cake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,8 +421,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 62, y: 1}
+  m_SizeDelta: {x: 46.3748, y: 29.2361}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &652849361
 MonoBehaviour:
@@ -459,7 +444,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -547,8 +532,9 @@ GameObject:
   - component: {fileID: 693671296}
   - component: {fileID: 693671298}
   - component: {fileID: 693671297}
+  - component: {fileID: 693671299}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text Kiwi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,8 +556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 61.95862, y: 1}
+  m_SizeDelta: {x: 46.2914, y: 29.1912}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &693671297
 MonoBehaviour:
@@ -593,7 +579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -670,6 +656,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693671295}
   m_CullTransparentMesh: 1
+--- !u!114 &693671299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693671295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9160185ad89be42b25a3e84e9949c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectPrefab: {fileID: 7428237898184676927, guid: 0ac2d64e1687b3342b070f8e701c208d, type: 3}
 --- !u!1 &788980595
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,6 +779,8 @@ MonoBehaviour:
   respawnPoint: {fileID: 1338997318}
   invincibilityTime: 2
   beakTransform: {fileID: 2114312669}
+  inventoryUI: {fileID: 226117878}
+  inventoryKey: 105
 --- !u!50 &825175592
 Rigidbody2D:
   serializedVersion: 4
@@ -961,8 +962,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.499985, y: 7.9999847}
-  m_SizeDelta: {x: 88.3118, y: 55.6744}
+  m_AnchoredPosition: {x: 349.76004, y: 34}
+  m_SizeDelta: {x: 268, y: 169}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828237406
 MonoBehaviour:
@@ -1028,7 +1029,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8838149eb06b2104eb182c7bb7f9d89f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c88c5f0eb9f990c43ae421497725b8d3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1230,8 +1231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 155.49998, y: 7.9999847}
-  m_SizeDelta: {x: 88.3118, y: 55.6744}
+  m_AnchoredPosition: {x: 350.12003, y: -71.5}
+  m_SizeDelta: {x: 268.7298, y: 169.4153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285639521
 MonoBehaviour:
@@ -1297,7 +1298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 50346673a267ac84ba84618da11d45bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc76663b754023246a58ed8984fc32f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1435,8 +1436,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -104, y: 8}
-  m_SizeDelta: {x: 88.3118, y: 55.6744}
+  m_AnchoredPosition: {x: 350, y: 136.9}
+  m_SizeDelta: {x: 268.4826, y: 169.2595}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1625606906
 MonoBehaviour:
@@ -1502,7 +1503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc1f8547c146bab4cbce0ecdf6151a69, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b3a50e16ff57aa4489886f56b749ceb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1825,7 +1826,7 @@ GameObject:
   - component: {fileID: 2063449054}
   - component: {fileID: 2063449053}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text Pitaya
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1847,8 +1848,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 62.020813, y: -1}
+  m_SizeDelta: {x: 46.4175, y: 29.263}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063449053
 MonoBehaviour:
@@ -1870,7 +1871,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
