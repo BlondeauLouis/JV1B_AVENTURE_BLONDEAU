@@ -793,6 +793,7 @@ MonoBehaviour:
   respawnPoint: {fileID: 1338997318}
   invincibilityTime: 2
   beakTransform: {fileID: 2114312669}
+  beak: {fileID: 2114312668}
   inventoryUI: {fileID: 226117878}
   inventoryKey: 105
 --- !u!50 &825175592
