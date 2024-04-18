@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float invincibilityTime = 2f;
 
     public Transform beakTransform;
+    public GameObject beak;
 
     public GameObject inventoryUI;
     public KeyCode inventoryKey = KeyCode.I;
@@ -142,6 +143,7 @@ public class PlayerMovement : MonoBehaviour
         if (!isInvincible)
         {
             currentHealth--;
+            beak.SetActive(!beak.activeSelf);
             StartCoroutine(InvincibilityRoutine());
         }
     }
@@ -155,6 +157,8 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(invincibilityTime);
 
         isInvincible = false;
+
+        beak.SetActive(!beak.activeSelf);
 
         GetComponent<SpriteRenderer>().sprite = sp1;
     }
