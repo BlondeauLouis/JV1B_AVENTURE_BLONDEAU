@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class PlayerMovement : MonoBehaviour
     public GameObject inventoryUI;
     public KeyCode inventoryKey = KeyCode.I;
 
+    public PostProcessVolume postProcessVolume;
+    public float maxBlurIntensity = 5f;
+    private DepthOfField depthOfFieldEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         currentDiabete = 0;
         spriteRenderer = GetComponent<SpriteRenderer>();
         inventoryUI.SetActive(false);
+        postProcessVolume.profile.TryGetSettings(out depthOfFieldEffect);
     }
 
 
@@ -133,6 +139,9 @@ public class PlayerMovement : MonoBehaviour
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }
+
+        float blurIntensity = Mathf.Clamp(currentDiabete / maxDiabete, 0f, 1f) * maxBlurIntensity;
+        depthOfFieldEffect.focusDistance.value = blurIntensity;
     }
     void MoveCharacter()
     {
