@@ -9,6 +9,8 @@ public class UseCakeButton : MonoBehaviour
 
     public TextMeshProUGUI cakeCountText;
 
+    public PlayerMovement playerMovement;
+
     private void Awake()
     {
         // Récupérer le composant TextMeshProUGUI pour afficher le nombre de cakes
@@ -26,9 +28,7 @@ public class UseCakeButton : MonoBehaviour
             PlayerPrefs.SetInt(cakePrefab.GetComponent<Object>().ID, currentCakeCount);
             cakeCountText.text = currentCakeCount.ToString(); // Mettre à jour l'affichage du nombre de cakes
 
-            // Ajouter des points de vie au joueur
-            // Ajoutez ici votre logique pour ajouter des points de vie au joueur
-            // Par exemple, vous pouvez accéder au script de santé du joueur et appeler une méthode pour ajouter des points de vie
+            playerMovement.GagnePv();
         }
     }
 }

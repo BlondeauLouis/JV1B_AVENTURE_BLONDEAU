@@ -148,6 +148,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void GagnePv()
+    {
+        currentHealth++;
+    }
+
     IEnumerator InvincibilityRoutine()
     {
         isInvincible = true;
