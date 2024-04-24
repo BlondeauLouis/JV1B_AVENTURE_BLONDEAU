@@ -29,6 +29,7 @@ public class UseCakeButton : MonoBehaviour
             cakeCountText.text = currentCakeCount.ToString(); // Mettre à jour l'affichage du nombre de cakes
 
             playerMovement.GagnePv();
+            playerMovement.GagneDiabete();
         }
     }
 }

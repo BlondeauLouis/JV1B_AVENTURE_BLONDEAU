@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public Sprite sp1, sp2, backsprite, frontsprite;
     public int maxHealth = 6;
     public int currentHealth;
+    public int maxDiabete = 6;
+    public int currentDiabete = 0;
     public float speed;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         DontDestroyOnLoad(this);
         currentHealth = maxHealth;
+        currentDiabete = 0;
         spriteRenderer = GetComponent<SpriteRenderer>();
         inventoryUI.SetActive(false);
     }
@@ -148,9 +151,28 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void PerdDiabete()
+    {
+        if (currentDiabete > 0)
+        {
+            currentDiabete--;
+        }
+    }
+
     public void GagnePv()
     {
-        currentHealth++;
+        if (currentHealth < 6)
+        {
+            currentHealth++;
+        }
+    }
+
+    public void GagneDiabete()
+    {
+        if (currentDiabete < 6)
+        {
+            currentDiabete++;
+        }
     }
 
     IEnumerator InvincibilityRoutine()
