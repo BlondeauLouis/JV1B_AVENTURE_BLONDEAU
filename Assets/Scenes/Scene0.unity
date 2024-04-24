@@ -791,7 +791,7 @@ MonoBehaviour:
   currentHealth: 0
   maxDiabete: 6
   currentDiabete: 0
-  speed: 0.5
+  speed: 0.25
   respawnPoint: {fileID: 1338997318}
   invincibilityTime: 2
   beakTransform: {fileID: 2114312669}
@@ -1962,12 +1962,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4ae5191ab90de1d4383556f01f77383d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16984fee7ec22ff45a0c57104faa4d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 60.014652, y: 40}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1982,8 +1982,8 @@ Transform:
   m_GameObject: {fileID: 1778861435}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 4.27, z: -1.52}
-  m_LocalScale: {x: 5.5118566, y: 3.5755343, z: 0.150357}
+  m_LocalPosition: {x: -0.3, y: -0.2, z: -1.52}
+  m_LocalScale: {x: 2.6407304, y: 1.7130384, z: 0.072036035}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
