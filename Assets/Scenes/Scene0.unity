@@ -798,6 +798,8 @@ MonoBehaviour:
   beak: {fileID: 2114312668}
   inventoryUI: {fileID: 226117878}
   inventoryKey: 105
+  postProcessVolume: {fileID: 0}
+  maxBlurIntensity: 5
 --- !u!50 &825175592
 Rigidbody2D:
   serializedVersion: 4
@@ -2588,7 +2590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2139536662
 MonoBehaviour:
   m_ObjectHideFlags: 0

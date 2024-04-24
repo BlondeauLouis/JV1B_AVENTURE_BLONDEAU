@@ -140,14 +140,23 @@ public class PlayerMovement : MonoBehaviour
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }
 
-        float blurIntensity = Mathf.Clamp(currentDiabete / maxDiabete, 0f, 1f) * maxBlurIntensity;
+        float blurIntensity = Mathf.Clamp(currentDiabete / maxDiabete, 0f, 1f) * maxBlurIntensity;  //VOIR PLUS TARD POUR TROUBLER LA VISION
         depthOfFieldEffect.focusDistance.value = blurIntensity;
     }
     void MoveCharacter()
     {
-        myRigidbody.MovePosition(
-            transform.position + change * speed
-        );
+        if (currentDiabete > 0)
+        {
+            myRigidbody.MovePosition(
+              transform.position + change * speed / currentDiabete
+          );
+        }
+        if (currentDiabete ==0)
+        {
+            myRigidbody.MovePosition(
+              transform.position + change * speed
+          );
+        }
     }
 
     public void PerdPv()
